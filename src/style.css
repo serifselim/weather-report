@@ -1,0 +1,111 @@
+.stretch-card > .card {
+  width: 100%;
+  min-width: 100%;
+}
+
+body {
+  background-color: #f9f9fa;
+}
+
+.padding {
+  padding: 5rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 2px 0px 3px 2px rgba(0, 0, 0, 0.44);
+}
+
+.card .card-body {
+  padding: 1.88rem 1.81rem;
+  background: rgb(144, 239, 149);
+  background: linear-gradient(
+    326deg,
+    rgba(144, 239, 149, 1) 44%,
+    rgba(0, 212, 255, 1) 74%
+  );
+  opacity: 0.8;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card-weather .weather-date-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 38px;
+}
+
+.form-select {
+  border-radius: 3px;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+
+.form-select:focus {
+  outline: none;
+}
+
+.h3,
+h3 {
+  font-size: 1.75rem;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.card-weather .weather-data {
+  padding: 0 0 4.75rem;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
+.display-3 {
+  font-size: 2.5rem;
+}
+
+.card-weather .weakly-weather {
+  background: #ffffff;
+  overflow-x: auto;
+}
+
+.card-weather .weakly-weather .weakly-weather-item {
+  flex: 0 0 14.28%;
+  border-right: 1px solid #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0 !important;
+}
+
+.card-weather .weakly-weather .weakly-weather-item i {
+  font-size: 1.2rem;
+}
