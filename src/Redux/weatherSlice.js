@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import cities from '../Data/tr_cities.json';
 
 const initialState = {
-  say: 'hello',
+  cities: cities,
 };
 
 const weatherSlice = createSlice({
