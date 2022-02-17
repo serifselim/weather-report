@@ -1,12 +1,25 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Select = () => {
+  const cities = useSelector((state) => state.weather.cities);
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
-    <select className='form-select' aria-label='Default select example'>
-      <option selected>Istanbul</option>
-      <option value='1'>One</option>
-      <option value='2'>Two</option>
-      <option value='3'>Three</option>
+    <select
+      onChange={handleChange}
+      className='form-select'
+      aria-label='Default select example'>
+      {cities.map((city) => {
+        return (
+          <option id={city.id} value={city.name}>
+            {city.name}
+          </option>
+        );
+      })}
     </select>
   );
 };

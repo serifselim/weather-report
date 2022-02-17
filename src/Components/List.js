@@ -3,19 +3,20 @@ import { useSelector } from 'react-redux';
 import ListItem from './ListItem';
 
 const List = () => {
-  const cities = useSelector((state) => state.weather.cities);
+  const { daily } = useSelector((state) => state.weather.weatherData);
+  const isFetch = useSelector((state) => state.weather.isFetch);
 
-  console.log(cities);
+  console.log(daily);
 
   return (
     <div className='d-flex weakly-weather'>
-      <ListItem />
-      <ListItem />
-      <ListItem />
-      <ListItem />
-      <ListItem />
-      <ListItem />
-      <ListItem />
+      {isFetch ? (
+        daily.slice(0, 7).map((day) => {
+          return <ListItem day={day} />;
+        })
+      ) : (
+        <h3>Loading Data</h3>
+      )}
     </div>
   );
 };
