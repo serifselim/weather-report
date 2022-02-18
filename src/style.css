@@ -90,13 +90,20 @@ h6 {
 }
 
 .card-weather .weakly-weather {
-  background: #ececec;
+  /* background: #33ddff; */
   overflow-x: auto;
+  background: linear-gradient(
+    326deg,
+    rgba(144, 239, 149, 1) 75%,
+    rgba(0, 212, 255, 1) 90%
+  );
+  font-weight: bold;
+  border-top: 1px solid white;
 }
 
 .card-weather .weakly-weather .weakly-weather-item {
   flex: 0 0 14.28%;
-  border-right: 1px solid #f2f2f2;
+  border-right: 1px solid white;
   padding: 1rem;
   text-align: center;
 }
