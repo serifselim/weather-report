@@ -1,5 +1,5 @@
 import React from 'react';
-import { DAYS_OF_WEEK } from '../Data/days';
+import { DAYS_OF_WEEK } from '../Data/dates';
 
 const ListItem = ({ day }) => {
   const { temp, weather, dt } = day;

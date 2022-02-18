@@ -101,6 +101,12 @@ h6 {
   text-align: center;
 }
 
+.loading-list {
+  height: px;
+  width: 100%;
+  background: #ececec;
+}
+
 .mb-0,
 .my-0 {
   margin-bottom: 0 !important;

@@ -2,12 +2,19 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchWeatherData } from './Redux/weatherSlice';
 import { Information, List, Select, Weather } from './Components';
+import cities from './Data/tr_cities.json';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchWeatherData());
+    dispatch(
+      fetchWeatherData({
+        city: cities[0].name,
+        lat: cities[0].latitude,
+        lon: cities[0].longitude,
+      })
+    );
   }, []);
 
   return (

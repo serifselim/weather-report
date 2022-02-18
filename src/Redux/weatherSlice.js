@@ -12,14 +12,15 @@ const initialState = {
 
 export const fetchWeatherData = createAsyncThunk(
   'fetchWeatherData',
-  async () => {
+  async (data) => {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=40.6499&lon=35.8353&appid=${REACT_APP_API_KEY}&exclude=minutely&units=metric`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${data.lat}&lon=${data.lon}&appid=${REACT_APP_API_KEY}&exclude=minutely&units=metric`
     );
 
     const { current, daily } = response.data;
 
     return {
+      city: data.city,
       current,
       daily,
     };
