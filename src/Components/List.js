@@ -6,8 +6,6 @@ const List = () => {
   const { daily } = useSelector((state) => state.weather.weatherData);
   const isFetch = useSelector((state) => state.weather.isFetch);
 
-  console.log(daily);
-
   if (isFetch) {
     return (
       <div className='d-flex weakly-weather'>
